@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卓越動力切版Test</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/mohwfavicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <header class="navbar">
+
+        <!-- LOGO與標題 -->
+        <div class="title">
+            <a href="#">
+                <img class="logo" src="./images/LOGO.png" alt="衛生福利部" aria-label="衛生福利部">
+            </a>
+            <div class="vertical-line"></div>
+            <h1>充實牙醫醫療量能計畫專區</h1>
+        </div>
+
+        <!-- 使用者狀態 -->
+        <div class="user-status">
+            <div class="user-info">
+                <p>系統管理者</p>
+                <p>張某某</p>
+                <p id="time"></p>
+            </div>
+            <div class="vertical-line-item"></div>
+            <div class="user-login">
+                <button class="btn-login">登出</button>
+            </div>
+        </div>
+
+        <!-- 漢堡選單 -->
+        <a href="#" id="hamburgerBtn">
+            <img id="hamburger-icon" src="./images/menubar_black.png" alt="選單">
+        </a>
+
+    </header>
+
+    <!-- 主要內容 -->
+    <div class="container">
+
+        <!-- 左邊主選單 -->
+        <div id="left-menu">
+            <nav>
+                <ul class="menu-links" id="menuLinks">
+                    <li><a href="#"><img class="menu-logo" src="./images/news_green.png" alt="訊息發布">訊息發布</a></li>
+                    <li><a href="#"><img class="menu-logo" src="./images/awards_green.png" alt="教學醫院">教學醫院</a></li>
+                    <li><a href="#"><img class="menu-logo" src="./images/setting_green.png" alt="系統管理">系統管理</a></li>
+                    <li><a href="#"><img class="menu-logo" src="./images/download_green.png" alt="手冊下載">手冊下載</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- 右邊主要內容區 -->
+        <div id="right-main">
+            <main>
+                <!-- 麵包屑 -->
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                    <ol>
+                        <li><a href="#"><img class="home-logo" src="./images/home.png" alt="首頁"></a></li>
+                        <li><a class="category" href="#">教學醫院</a></li>
+                        <li aria-current="page">ＯＯＯＯＯＯ</li>
+                    </ol>
+                </nav>
+
+                <!-- 第一個BLOCK:查詢區域 -->
+                <section class="block">
+                    <h2 class="main-title">ＯＯＯＯＯＯ</h2>
+                    <hr>
+                    <form class="form-flex">
+                        <div class="row-50">
+                            <div class="form-row">
+                                <label for="year">年度</label>
+                                <div class="select-wrap">
+                                    <select id="year" name="year" class="form-select">
+                                        <option selected>請選擇</option>
+                                        <option value="110">110年</option>
+                                        <option value="112">112年</option>
+                                        <option value="113">113年</option>
+                                        <option value="114">114年</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="status">狀態</label>
+                                <div class="select-wrap">
+                                    <select id="status" name="status" class="form-select">
+                                        <option selected>請選擇</option>
+                                        <option value="pass">通過</option>
+                                        <option value="pending">審核中</option>
+                                        <option value="failed">未通過</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-70-30">
+                            <div class="form-row">
+                                <div class="text-file">
+                                    <label for="file">匯入檔案</label>
+                                    <p class="text-format">請儲存成「Excel 97-2003活頁簿」格式</p>
+                                </div>
+                                <div class="custom-file">
+                                    <label for="formFile" class="custom-file-label">選擇檔案</label>
+                                    <input type="file" id="formFile" name="uploadFile" class="form-control-file">
+                                </div>
+                            </div>
+
+                            <div class="form-button-download">
+                                <button class="btn-blue">上傳檔案</button>
+                                <div class="vertical-line-item"></div>
+                                <button class="download-icon">下載範本
+                                    <img class="download-img" src="./images/download.png" alt="下載">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="form-button-submit">
+                            <button class="btn-green-border" type="reset">重置</button>
+                            <button class="btn-green" type="submit">查詢</button>
+                        </div>
+
+                    </form>
+
+                </section>
+
+                <!-- 第二個BLOCK:表單 -->
+                <section class="block">
+                    <p class="text-time">開放報名時間：YYY/MM/DD~YYY/MM/DD（請於時間內完成設定）</p>
+                    <div class="form-button justify-content-end">
+                        <button class="btn-export-green justify-content-end">匯出</button>
+                    </div>
+
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>醫院名稱</th>
+                                    <th>身分證字號</th>
+                                    <th>姓名</th>
+                                    <th>狀態</th>
+                                    <th>功能</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hospital-info">
+                                    <td>國立OO大學醫學院附設醫院</td>
+                                    <td>A123456789</td>
+                                    <td>劉OO</td>
+                                    <td>通過</td>
+                                    <td>
+                                        <a class="check-status" href="#"><img class="check" src="./images/eye_blue.png"
+                                                alt="檢視">檢視</a>
+                                    </td>
+                                </tr>
+                                <tr class="hospital-info">
+                                    <td>國立OO大學醫學院附設醫院</td>
+                                    <td>A123456789</td>
+                                    <td>劉OO</td>
+                                    <td>通過</td>
+                                    <td>
+                                        <a class="check-status" href="#"><img class="check" src="./images/eye_blue.png"
+                                                alt="檢視">檢視</a>
+                                    </td>
+                                </tr>
+                                <tr class="hospital-info">
+                                    <td>國立OO大學醫學院附設醫院</td>
+                                    <td>A123456789</td>
+                                    <td>劉OO</td>
+                                    <td>通過</td>
+                                    <td>
+                                        <a class="check-status" href="#"><img class="check" src="./images/eye_blue.png"
+                                                alt="檢視">檢視</a>
+                                    </td>
+                                </tr>
+                                <tr class="hospital-info">
+                                    <td>國立OO大學醫學院附設醫院</td>
+                                    <td>A123456789</td>
+                                    <td>劉OO</td>
+                                    <td>通過</td>
+                                    <td>
+                                        <a class="check-status" href="#"><img class="check" src="./images/eye_blue.png"
+                                                alt="檢視">檢視</a>
+                                    </td>
+                                </tr>
+                                <tr class="hospital-info">
+                                    <td>國立OO大學醫學院附設醫院</td>
+                                    <td>A123456789</td>
+                                    <td>劉OO</td>
+                                    <td>通過</td>
+                                    <td>
+                                        <a class="check-status" href="#"><img class="check" src="./images/eye_blue.png"
+                                                alt="檢視">檢視</a>
+                                    </td>
+                                </tr>
+                                <tr class="hospital-info">
+                                    <td>國立OO大學醫學院附設醫院</td>
+                                    <td>A123456789</td>
+                                    <td>劉OO</td>
+                                    <td>通過</td>
+                                    <td>
+                                        <a class="check-status" href="#"><img class="check" src="./images/eye_blue.png"
+                                                alt="檢視">檢視</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+            </main>
+
+            <!-- footer聯絡方式、版權 -->
+            <footer>
+                <div class="contact">
+                    <ul>
+                        <div class="row">
+                            <li><img class="email-logo" src="./images/email.png" alt="信箱">計畫服務信箱：dentalpgy@jct.org.tw
+                            </li>
+                            <li><img class="email-logo" src="./images/email.png" alt="信箱">系統服務信箱：dpgy.mohw@gmail.com
+                            </li>
+                        </div>
+
+                        <div class="row">
+                            <li><img class="tel-logo" src="./images/phone.png" alt="電話">計畫執行諮詢專線：(02)8964-3000#3152、3151
+                            </li>
+                            <li><img class="tel-logo" src="./images/phone.png" alt="電話">系統客服專線：0903-109-570（請於週一～五
+                                9:30-18:00來電，12:00-13:00為休息時間）</li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>衛生福利部 版權所有2025©</p>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="./js/main.js">
+    </script>
+
+</body>
+
+</html>
