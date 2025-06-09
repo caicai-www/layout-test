@@ -247,7 +247,7 @@ main {
 
 label {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin: 1rem 0;
 }
@@ -260,15 +260,14 @@ label {
 }
 
 .text-format {
-    font-size: 1.2rem;
+    align-self: center;
     color: red;
     font-weight: bold;
-    margin: 1rem 0;
 }
 
 .text-file {
     display: flex;
-    gap: 0.75rem
+    gap: 0.75rem;
 }
 
 .custom-file {
@@ -575,6 +574,10 @@ button:active {
 
     .text-file {
         justify-content: space-between;
+    }
+
+    .text-format {
+        font-size: 1rem;
     }
 
     .btn-blue,
